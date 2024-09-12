@@ -1,0 +1,130 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Animação do título (mudança de cor) */
+.animacao-titulo {
+    animation: corTitulo 3s infinite alternate;
+}
+
+@keyframes corTitulo {
+    0% { color: white; }
+    100% { color: yellow; }
+}
+
+/* Animação do texto (mudança de tamanho) */
+.animacao-texto {
+    animation: tamanhoTexto 2s infinite alternate;
+}
+
+@keyframes tamanhoTexto {
+    0% { font-size: 16px; }
+    100% { font-size: 20px; }
+}
+
+/* Animação da imagem (mover para cima e para baixo) */
+.animacao-imagem img {
+    display: block;
+    margin: 0 auto;
+    animation: moverImagem 4s infinite alternate;
+}
+
+@keyframes moverImagem {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Animação de movimento de uma seção */
+.animacao-movimento {
+    animation: moverSeccao 5s infinite alternate;
+}
+
+@keyframes moverSeccao {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}
+
+/* Barra de acessibilidade */
+.acessibilidade-barra {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.acessibilidade-barra button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.acessibilidade-barra button:hover {
+    color: #007BFF;
+}
+
+main {
+    padding: 60px 20px;
+    margin-top: 120px; /* Espaço suficiente para a barra de acessibilidade */
+}
+
+main section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #007BFF;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Alto contraste */
+.high-contrast {
+    background-color: black;
+    color: yellow;
+}
+
+/* Modo Daltonismo (escala de cinza) */
+.color-blind-mode {
+    filter: grayscale(100%);
+}
+
+/* Pausar animações */
+.pause-animations * {
+    animation-play-state: paused !important;
+}
